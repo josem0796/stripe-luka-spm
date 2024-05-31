@@ -53,7 +53,6 @@ public class LukaStripeSdk : ObservableObject {
       .sink { intent in
         var configuration = PaymentSheet.Configuration()
         configuration.merchantDisplayName = "Lukapay"
-        
         configuration.allowsDelayedPaymentMethods = true
         LukaStripeSdk.instance.paymentSheet = PaymentSheet(paymentIntentClientSecret: intent.clientSecret, configuration: configuration)
         LukaStripeSdk.instance.paymentSheetReady = true
