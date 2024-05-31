@@ -18,7 +18,7 @@ class ApiConfig {
 
 func provideCertificate() -> SecCertificate {
   
-  let bundle = Bundle(for: LukaStripeSdk.self)
+  let bundle = Bundle.main
   
   guard let certificatePath = bundle.url(forResource: "payco2024", withExtension: "cer") else {
       fatalError("Couldn't find certificate file")
