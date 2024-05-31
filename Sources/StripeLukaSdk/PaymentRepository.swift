@@ -16,7 +16,7 @@ internal struct PaymentRepository {
     let token = LukaStripeSdk.instance.session.lukaToken
     
     return LukaStripeSdk.instance.apiSession.request(
-      URL(string: "\(ApiConfig.baseUrl)/servicio/login")!,
+      URL(string: "\(ApiConfig.baseUrl)/Transaccion/stripe.crear")!,
       method: .post,
       parameters: purchase,
       encoder: JSONParameterEncoder.prettyPrinted,
