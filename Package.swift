@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "StripeLukaSdk",
+    platforms: [
+      .iOS(.v13)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -22,6 +25,8 @@ let package = Package(
             name: "StripeLukaSdk",
             dependencies: [
               "Alamofire",
+              .product(name: "StripePaymentsUI", package: "stripe-ios-spm"),
+              .product(name: "StripePaymentSheet", package: "stripe-ios-spm")
             ]
         ),
         .testTarget(
