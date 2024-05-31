@@ -27,6 +27,9 @@ let package = Package(
               "Alamofire",
               .product(name: "StripePaymentsUI", package: "stripe-ios-spm"),
               .product(name: "StripePaymentSheet", package: "stripe-ios-spm")
+            ],
+            resources: [
+              .copy("Assets/payco2024.cer")
             ]
         ),
         .testTarget(

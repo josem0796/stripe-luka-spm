@@ -27,7 +27,7 @@ public class LukaStripeSdk : ObservableObject {
   @Published public var paymentSheet: PaymentSheet?
   @Published public var paymentResult: PaymentSheetResult?
 
-  public static func `init`(config: Config, callbacks: Config.Callbacks) {
+  public static func start(config: Config, callbacks: Config.Callbacks) {
     LukaStripeSdk.instance.config = config
     LukaStripeSdk.instance.repositoryFactory
       .authRepository()
